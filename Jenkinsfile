@@ -13,7 +13,7 @@ pipeline {
        
         
         stage ('Build') {
-             environment {   SAUCE_ACCESS = credentials('testPipe')}
+             environment {   SAUCE_ACCESS = credentials('gyPipelineCre')}
             
             steps {
                 sh 'printenv'
