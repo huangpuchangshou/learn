@@ -9,6 +9,11 @@ pipeline {
 
     
     stages{
+        
+        environment {
+   SAUCE_ACCESS = credentials('testPipe')
+}
+        
         stage ('Build') {
             steps {
                 sh 'printenv'
