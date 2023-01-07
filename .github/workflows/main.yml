@@ -14,8 +14,23 @@ jobs:
   my_job:
     name: deploy to staging
     runs-on: ubuntu-18.04
+    steps:
+    - name: echo
+      run: echo helloworld
+        
   my_job2:
     name: seconds job
     runs-on: ubuntu-18.04
+    steps:
+    - name: echo2
+      run: echo helloworld
+  
+  my_job3:
+    name: 3rd job
+    needs: [my_job,my_job2]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: echo2
+      run: echo helloworld
           
   
